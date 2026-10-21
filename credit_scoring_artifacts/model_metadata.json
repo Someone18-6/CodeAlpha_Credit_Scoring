@@ -1,0 +1,33 @@
+{
+    "project": "Credit Scoring Model",
+    "model": "Tuned XGBoost",
+    "dataset": "German Credit Dataset",
+    "target_mapping": {
+        "1": "Good Risk",
+        "2": "Bad Risk",
+        "xgboost_0": "Good Risk",
+        "xgboost_1": "Bad Risk"
+    },
+    "best_hyperparameters": {
+        "classifier__subsample": 0.8,
+        "classifier__n_estimators": 300,
+        "classifier__max_depth": 3,
+        "classifier__learning_rate": 0.1,
+        "classifier__colsample_bytree": 1.0
+    },
+    "cross_validation": {
+        "folds": 5,
+        "mean_f1": 0.5487,
+        "f1_std": 0.0416,
+        "mean_recall": 0.5042,
+        "mean_roc_auc": 0.7911
+    },
+    "test_metrics": {
+        "accuracy": 0.785,
+        "precision": 0.6735,
+        "recall": 0.55,
+        "f1_score": 0.6055,
+        "roc_auc": 0.8031
+    },
+    "important_note": "Predicts good/bad credit risk; does not calculate an official credit score. Metrics are from one held-out test split."
+}
